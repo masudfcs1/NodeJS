@@ -14,7 +14,15 @@ const mobile = () => {
     return "01722539108"
 }
 
-exports.name = getname;
-exports.age = getAge;
-exports.add = address;
-exports.mb = mobile;
+// exports.name = getname;
+// exports.age = getAge;
+// exports.add = address;
+// exports.mb = mobile;
+
+module.exprots = {
+
+    getname,
+    getAge,
+    address,
+    mobile
+}

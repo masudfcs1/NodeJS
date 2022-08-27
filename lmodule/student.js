@@ -17,3 +17,4 @@ const mobile = () => {
 exports.name = getname;
 exports.age = getAge;
 exports.add = address;
+exports.mb = mobile;

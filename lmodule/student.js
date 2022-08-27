@@ -19,7 +19,7 @@ const mobile = () => {
 // exports.add = address;
 // exports.mb = mobile;
 
-module.exprots = {
+module.exports = {
 
     getname,
     getAge,

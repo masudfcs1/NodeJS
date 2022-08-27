@@ -1,6 +1,6 @@
 const s1 = require('./student');
 
 console.log(s1.getname());
-// console.log(s1.age());
-// console.log(s1.add());
-// console.log(s1.mb());
+console.log('Years: ', s1.getAge());
+console.log(s1.address());
+console.log(s1.mobile());

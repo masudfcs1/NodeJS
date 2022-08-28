@@ -30,8 +30,18 @@ const fs = require('fs');
 //     }
 // })
 
+//rename
+// fs.rename('./text1.txt', 'text.txt', (error, data) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log('Sucessful', data);
+//     }
+// })
 
-fs.rename('./text1.txt', 'text.txt', (error, data) => {
+
+//deleted Funcation
+fs.unlink('text.txt', (error) => {
     if (error) {
         console.log(error);
     } else {

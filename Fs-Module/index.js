@@ -41,10 +41,19 @@ const fs = require('fs');
 
 
 //deleted Funcation
-fs.unlink('text.txt', (error) => {
-    if (error) {
-        console.log(error);
+// fs.unlink('text.txt', (error) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log('Sucessful', data);
+//     }
+// })
+
+//Exited Funcation
+fs.exists('text.txt', (result) => {
+    if (result) {
+        console.log("Found");
     } else {
-        console.log('Sucessful', data);
+        console.log('Not Found');
     }
 })

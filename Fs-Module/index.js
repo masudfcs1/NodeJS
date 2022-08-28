@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.writeFile('./text.txt', 'This is Simple text', function(error) {
+fs.appendFile('./text.txt', ' I am 23 Year Old ', (error) => {
     if (error) {
         console.log(error);
     } else {

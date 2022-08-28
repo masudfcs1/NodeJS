@@ -21,8 +21,17 @@ const fs = require('fs');
 //     }
 // })
 
+//readFile
+// fs.readFile('./text.txt', 'utf-8', (error, data) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log('Sucessful', data);
+//     }
+// })
 
-fs.readFile('./text.txt', 'utf-8', (error, data) => {
+
+fs.rename('./text1.txt', 'text.txt', (error, data) => {
     if (error) {
         console.log(error);
     } else {

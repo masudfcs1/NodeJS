@@ -11,30 +11,29 @@ const myserver = http.createServer((req, res) => {
 
     // res.end("Hi, Server is sucessfully Run")
 
+    const handleredfile = (statuscode, filename) => {
+
+        fs.readFile(filename, (err, data) => {
+            res.writeHead(statuscode, { "Contact-type": "text/html" })
+            res.write(data)
+            res.end();
+        })
+
+    }
+
+
+
     if (req.url === '/') {
-        fs.readFile("home.html", (err, data) => {
-            res.writeHead(200, { "Contact-type": "text/html" })
-            res.write(data)
-            res.end();
-        })
+        handleredfile(200, "home.html")
     } else if (req.url === '/about') {
-        fs.readFile("about.html", (err, data) => {
-            res.writeHead(200, { "Contact-type": "text/html" })
-            res.write(data)
-            res.end();
-        })
+        handleredfile(200, "about.html")
+
     } else if (req.url === '/contact') {
-        fs.readFile("contact.html", (err, data) => {
-            res.writeHead(200, { "Contact-type": "text/html" })
-            res.write(data)
-            res.end();
-        })
+        handleredfile(200, "contact.html")
+
     } else {
-        fs.readFile("error.html", (err, data) => {
-            res.writeHead(404, { "Contact-type": "text/html" })
-            res.write(data)
-            res.end();
-        })
+        handleredfile(404, "home.html")
+
     }
 
     //Partice 

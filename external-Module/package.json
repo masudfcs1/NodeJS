@@ -1,0 +1,18 @@
+{
+  "name": "external-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "nodemon"
+  ],
+  "author": "Masud Rana",
+  "license": "ISC",
+  "dependencies": {
+    "movies-names": "^1.1.1"
+  }
+}

@@ -4,7 +4,9 @@ const hostname = '127.0.0.1'
 
 
 const myserver = http.createServer((req, res) => {
-    res.writeHead(206, 'content-Type', 'text/plain')
+    //res.writeHead(206, 'content-Type', 'text/plain')
+    console.log(req.url);
+
     res.end("Hi, Server is sucessfully Run")
 })
 

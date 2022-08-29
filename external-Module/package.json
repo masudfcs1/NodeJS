@@ -13,6 +13,7 @@
   "author": "Masud Rana",
   "license": "ISC",
   "dependencies": {
+    "computer-name": "^0.1.0",
     "movies-names": "^1.1.1"
   }
 }

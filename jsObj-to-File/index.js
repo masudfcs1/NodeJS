@@ -10,4 +10,12 @@ const objdata = {
     }
 }
 
-const data = JSON.stringfy(objdata)
+const data = JSON.stringify(objdata)
+
+fs.writeFile('test.json', data, (err) => {
+    if (err) {
+        console.log('error');
+    } else {
+        console.log('Sucessfully File write');
+    }
+})

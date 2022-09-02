@@ -6,5 +6,5 @@ fs.readFile('./test.json', (err, data) => {
     }
 
     let obj = JSON.parse(data)
-    console.log(obj.address);
+    console.log(obj.name);
 })

@@ -1,19 +1,17 @@
 {
-    "name": "3.node-package-manager",
+    "name": "express",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon index.js"
+        "start": "nodemon app.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "chalk": "^5.0.1"
-    },
-    "devDependencies": {
+        "express": "^4.18.1",
         "nodemon": "^2.0.19"
     }
 }

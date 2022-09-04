@@ -6,6 +6,14 @@ const morgan = require('morgan')
 
 // app.use(morgan('dev'))
 
+function custommiddleware(req, res, next) {
+    console.log("you win!");
+    next()
+}
+app.use(custommiddleware)
+
+
+
 app.get("/help", morgan('dev'), (req, res) => {
     // res.send("<h1>It's help Page</h1>")
     res.json({

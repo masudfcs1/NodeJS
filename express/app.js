@@ -7,8 +7,10 @@ const morgan = require('morgan')
 // app.use(morgan('dev'))
 
 function custommiddleware(req, res, next) {
-    console.log("you win!");
-    next()
+    if (req.url === "/contact") {
+        res.send("Page is terminated");
+    }
+    next();
 }
 app.use(custommiddleware)
 

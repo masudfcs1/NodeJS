@@ -2,15 +2,18 @@ const express = require("express");
 const app = express();
 const port = process.env.port || 8080;
 const hostname = "127.0.0.1";
+const morgan = require('morgan')
 
-app.get("/help", (req, res) => {
+// app.use(morgan('dev'))
+
+app.get("/help", morgan('dev'), (req, res) => {
     // res.send("<h1>It's help Page</h1>")
     res.json({
         message: "I response From route handle"
     })
 });
 
-app.get("/about", (req, res) => {
+app.get("/about", morgan('dev'), (req, res) => {
     res.send("<h1>It's about Page</h1>");
 });
 

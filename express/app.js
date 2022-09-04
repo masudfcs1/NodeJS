@@ -1,37 +1,37 @@
- const express = require('express')
- const app = express();
- const port = process.env.port || 8080
- const hostname = '127.0.0.1'
+const express = require("express");
+const app = express();
+const port = process.env.port || 8080;
+const hostname = "127.0.0.1";
 
+app.get("/help", (req, res) => {
+    // res.send("<h1>It's help Page</h1>")
+    res.json({
+        message: "I response From route handle"
+    })
+});
 
- app.get('/help', (req, res) => {
-     res.send("<h1>It's help Page</h1>")
- })
+app.get("/about", (req, res) => {
+    res.send("<h1>It's about Page</h1>");
+});
 
- app.get('/about', (req, res) => {
-     res.send("<h1>It's about Page</h1>")
- })
+app.get("/career", (req, res) => {
+    res.send("<h1>It's Career Page</h1>");
+});
 
- app.get('/career', (req, res) => {
-     res.send("<h1>It's Career Page</h1>")
- })
+app.get("/contact", (req, res) => {
+    res.send("<h1>It's contact Page</h1>");
+});
 
- app.get('/contact', (req, res) => {
-     res.send("<h1>It's contact Page</h1>")
- })
+app.get("/", (req, res) => {
+    res.send("<h1>Never Give Up!</h1>");
+});
 
+app.get("*", (req, res) => {
+    res.send("<h1>404! Not Found</h1>");
+});
 
- app.get('/', (req, res) => {
-     res.send("<h1>Never Give Up!</h1>")
- })
+app.listen(port, () => {
+    console.log(`Sucessfully.Server is Run ${port}`);
+});
 
- app.get('*', (req, res) => {
-     res.send("<h1>404! Not Found</h1>")
- })
-
- app.listen(port, () => {
-     console.log(`Sucessfully.Server is Run ${port}`);
- })
-
-
- //  console.log('Masud Rana');
+//  console.log('Masud Rana');

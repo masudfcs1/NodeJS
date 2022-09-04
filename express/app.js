@@ -12,7 +12,16 @@ function custommiddleware(req, res, next) {
     }
     next();
 }
-app.use(custommiddleware)
+
+function tinylogger() {
+    return (req, res) => {
+        console.log(`${req.method}-${req.url}`);
+        next()
+    }
+}
+
+const middleware = [custommiddleware, tinylogger()]
+    // app.use(custommiddleware)
 
 
 

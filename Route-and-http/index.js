@@ -21,8 +21,9 @@ app.use('/post', postrouter)
     //     res.send('<h1>Talking about Product ID</h1>')
     // })
 
-app.use('/product/:pordID', (req, res) => {
-    res.send('<h1> about Product ID</h1>')
+app.use('/product/:productID', (req, res) => {
+    console.log(req.params);
+    res.send('<h1>Talk about Product ID</h1>' + req.params.productID)
 })
 
 

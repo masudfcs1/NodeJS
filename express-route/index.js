@@ -3,33 +3,13 @@ const app = express();
 const port = process.env.port || 8080;
 const hostname = "127.0.0.1";
 const morgan = require('morgan')
-
 app.use(morgan('dev'))
 
-const router = express.Router()
-
-router.get('/login', (req, res) => {
-    res.send("<h1>This is Login Route.</h1>")
-    req.url
-
-})
+const userrouter = require('./router')
 
 
-router.get('/signup', (req, res) => {
-    res.send("<h1>This is Login Route.</h1>")
-})
 
-
-router.get('/about', (req, res) => {
-    res.send("<h1>This is About Route.</h1>")
-})
-
-
-router.get('/contact', (req, res) => {
-    res.send("<h1>This is Contact Route.</h1>")
-})
-
-app.use("/user", router)
+app.use("/user", userrouter)
 
 
 app.get("/", (req, res) => {

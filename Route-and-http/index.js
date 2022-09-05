@@ -5,11 +5,18 @@ const hostname = "127.0.0.1";
 const morgan = require('morgan')
 app.use(morgan('dev'))
 
+
+
 const userrouter = require('./router')
+const postrouter = require('./postRoute')
+
+
+
 
 
 
 app.use("/user", userrouter)
+app.use('/post', postrouter)
 
 
 app.get("/", (req, res) => {

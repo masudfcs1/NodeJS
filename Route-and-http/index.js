@@ -17,6 +17,13 @@ const postrouter = require('./postRoute')
 
 app.use("/user", userrouter)
 app.use('/post', postrouter)
+    // app.use('/product/:prodId', (req, res) => {
+    //     res.send('<h1>Talking about Product ID</h1>')
+    // })
+
+app.use('/product/:pordID', (req, res) => {
+    res.send('<h1> about Product ID</h1>')
+})
 
 
 app.get("/", (req, res) => {

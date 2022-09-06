@@ -1,23 +1,23 @@
 const router = require('express').Router()
 
-router.get('/login', (req, res) => {
-    res.send("<h1>This is Login Route.</h1>")
-    req.url
+router.get('/:postId', (req, res) => {
+    res.send("This is Login Route." + req.params.postId)
+
 
 })
 
 
-router.get('/signup', (req, res) => {
-    res.send("<h1>This is Login Route.</h1>")
+router.post('/:postId', (req, res) => {
+    res.send("This is Post Route." + req.params.postId)
 })
 
 
-router.get('/about', (req, res) => {
-    res.send("<h1>This is About Route.</h1>")
+router.put('/:postId', (req, res) => {
+    res.send("This is Put Route." + req.params.postId)
 })
 
-router.get('/contact', (req, res) => {
-    res.send("<h1>This is Contact Route.</h1>")
+router.delete('/:postId', (req, res) => {
+    res.send("This is Delete Route." + req.params.postId)
 })
 
 module.exports = router

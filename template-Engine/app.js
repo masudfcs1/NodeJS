@@ -4,7 +4,13 @@ const morgan = require('morgan')
 const app = express()
 app.set('view engine', 'ejs')
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Title EJS Apply' })
+    let post = {
+        title: 'hello world',
+        content: 'stick ruin',
+        badboy: 'HEad',
+        published: true
+    }
+    res.render('index', { title: 'Title EJS Apply', post })
 })
 
 app.use(morgan('dev'))

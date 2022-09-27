@@ -16,6 +16,15 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur neque at vitae, mollitia culpa ut ad possimus esse architecto ipsa totam nostrum dicta ex inventore, quam excepturi quas voluptatibus?</p>
 
     <%= Date() %>
+
+        <% if(post.published){ %>
+            <h3>title:
+                <%=post.title %>
+            </h3>
+            <p>Badboy:
+                <%= post.badboy %>
+            </p>
+            <% } %>
 </body>
 
 </html>

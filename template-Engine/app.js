@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
         title: 'hello world',
         content: 'stick ruin',
         badboy: 'HEad',
-        published: true
+        published: false
     }
     res.render('index', { title: 'Title EJS Apply', post })
 })

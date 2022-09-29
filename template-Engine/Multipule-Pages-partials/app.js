@@ -10,17 +10,17 @@ app.set('view engine','ejs')
 app.use(morgan('dev'))
 
 app. get('',(req,res)=>{
-    res.render ('pages/index')
+    res.render ('pages/index',{title:'Hello pages'})
 })
 app. get('/about',(req,res)=>{
-    res.render ('pages/about')
+    res.render ('pages/about',{title:'About pages'})
 })
 app. get('/service',(req,res)=>{
-    res.render ('pages/service')
+    res.render ('pages/service',{title:'Service pages'})
    
 })
 app. get('/help',(req,res)=>{
-    res.render ('pages/help')
+    res.render ('pages/help',{title:'Help pages'})
    
 })
 

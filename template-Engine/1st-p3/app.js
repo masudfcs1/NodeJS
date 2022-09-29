@@ -9,6 +9,10 @@ app.set('view engine','ejs')
 app.use(morgan('dev'))
 
 app. get('/',(req,res)=>{
+    let post={
+        title: 'Never Give UP',
+        author: 'Masud Rana'
+    }
     res.render ('index')
 })
 

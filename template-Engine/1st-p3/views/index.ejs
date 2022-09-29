@@ -11,5 +11,11 @@
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, officia soluta suscipit est aperiam molestias sunt sint, repellendus dignissimos pariatur quasi ad unde exercitationem dolore aliquid rem culpa sequi eligendi!</p>
     
     <p><%= new Date() %> </p>
+
+    <% for(let p of posts) {%>
+        <li>
+            <%=p.title %> By <%= p.author %> 
+        </li>
+        <% } %> 
 </body>
 </html>

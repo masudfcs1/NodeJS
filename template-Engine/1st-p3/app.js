@@ -13,7 +13,13 @@ app. get('/',(req,res)=>{
         title: 'Never Give UP',
         author: 'Masud Rana'
     }
-    res.render ('index')
+    let posts=[
+        {title: 'Title ONE',author: "Masud Rana"},
+        {title: 'Title Two',author: "Masud Rana"},
+        {title: 'Title Three',author: "Masud Rana"},
+        {title: 'Title Four',author: "Masud Rana"}
+    ]
+    res.render ('index',{title:'',post, posts})
 })
 
 const port=3030

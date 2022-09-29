@@ -12,10 +12,13 @@
     
     <p><%= new Date() %> </p>
 
-    <% for(let p of posts) {%>
-        <li>
-            <%=p.title %> By <%= p.author %> 
-        </li>
-        <% } %> 
+    <% for(let p of posts){ %> 
+      <li>
+        <%= p.title %> By <%= p.author%>  
+      </li>
+       
+      <% } %> 
+
+   
 </body>
 </html>

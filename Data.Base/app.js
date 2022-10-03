@@ -18,8 +18,9 @@ app.get('/', (req, res) => {
     })
 })
 
-mongoose.connect('mongodb://localhost:27017',{
-    useNewUrlParser: false
+mongoose.connect('mongodb://localhost:27017/test',{
+   // useNewUrlParser: false,
+    serverSelectionTimeoutMS:5.0,
 })
 
 .then(()=>{
@@ -30,7 +31,7 @@ mongoose.connect('mongodb://localhost:27017',{
 })
 
 .catch(e =>{
-   console.log(e);
+   console.log("Not Connected to Mongoose Server");
 })
 
 
